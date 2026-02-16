@@ -1,0 +1,209 @@
+# ═══════════════════════════════════════════════════════════
+# EXEMPLE DE CONFIGURATION ITEMSADDER POUR ECONOMYPLUGIN
+# ═══════════════════════════════════════════════════════════
+# Placer ce fichier dans: plugins/ItemsAdder/data/items_packs/economy/
+
+info:
+  namespace: custom
+
+items:
+  # ═══════════════════════════════════════════════════════════
+  # PORTEFEUILLE - Icône pour l'affichage /money
+  # ═══════════════════════════════════════════════════════════
+  wallet:
+    display_name: display-name-wallet
+    permission: economy.wallet
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+        - item/wallet.png
+    durability:
+      max_custom_durability: 1
+    specific_properties:
+      font:
+        unicode: ":wallet:"
+        scale_ratio: 1.0
+        y_position: 8
+
+  # ═══════════════════════════════════════════════════════════
+  # PIÈCE D'OR - 100€
+  # ═══════════════════════════════════════════════════════════
+  gold_coin:
+    display_name: display-name-gold-coin
+    permission: economy.coins
+    resource:
+      material: GOLD_NUGGET
+      generate: true
+      textures:
+        - item/gold_coin.png
+    specific_properties:
+      enchants:
+        - LUCK:1
+      attribute_modifiers:
+        hide: true
+
+  # ═══════════════════════════════════════════════════════════
+  # PIÈCE DE DIAMANT - 1000€
+  # ═══════════════════════════════════════════════════════════
+  diamond_coin:
+    display_name: display-name-diamond-coin
+    permission: economy.coins
+    resource:
+      material: DIAMOND
+      generate: true
+      textures:
+        - item/diamond_coin.png
+    specific_properties:
+      enchants:
+        - LUCK:1
+      attribute_modifiers:
+        hide: true
+
+  # ═══════════════════════════════════════════════════════════
+  # PIÈCE DE PLATINE - 5000€
+  # ═══════════════════════════════════════════════════════════
+  platinum_coin:
+    display_name: display-name-platinum-coin
+    permission: economy.coins
+    resource:
+      material: NETHERITE_INGOT
+      generate: true
+      textures:
+        - item/platinum_coin.png
+    specific_properties:
+      enchants:
+        - LUCK:1
+      attribute_modifiers:
+        hide: true
+
+  # ═══════════════════════════════════════════════════════════
+  # BILLET DE BANQUE - Pour /withdraw
+  # ═══════════════════════════════════════════════════════════
+  money_note:
+    display_name: display-name-money-note
+    permission: economy.withdraw
+    resource:
+      material: PAPER
+      generate: true
+      textures:
+        - item/money_note.png
+    specific_properties:
+      enchants:
+        - LUCK:1
+      attribute_modifiers:
+        hide: true
+
+  # ═══════════════════════════════════════════════════════════
+  # LINGOT DE RUBIS - 500€
+  # ═══════════════════════════════════════════════════════════
+  ruby_ingot:
+    display_name: display-name-ruby
+    permission: economy.gems
+    resource:
+      material: PRISMARINE_SHARD
+      generate: true
+      textures:
+        - item/ruby_ingot.png
+    specific_properties:
+      enchants:
+        - LUCK:1
+      attribute_modifiers:
+        hide: true
+
+  # ═══════════════════════════════════════════════════════════
+  # ÉMERAUDE PURE - 2000€
+  # ═══════════════════════════════════════════════════════════
+  pure_emerald:
+    display_name: display-name-emerald
+    permission: economy.gems
+    resource:
+      material: EMERALD
+      generate: true
+      textures:
+        - item/pure_emerald.png
+    specific_properties:
+      enchants:
+        - LUCK:1
+      attribute_modifiers:
+        hide: true
+
+  # ═══════════════════════════════════════════════════════════
+  # SAPHIR - 1500€
+  # ═══════════════════════════════════════════════════════════
+  sapphire:
+    display_name: display-name-sapphire
+    permission: economy.gems
+    resource:
+      material: LAPIS_LAZULI
+      generate: true
+      textures:
+        - item/sapphire.png
+    specific_properties:
+      enchants:
+        - LUCK:1
+      attribute_modifiers:
+        hide: true
+
+# ═══════════════════════════════════════════════════════════
+# NOMS D'AFFICHAGE
+# ═══════════════════════════════════════════════════════════
+display-name-wallet:
+  en: "&6&lPortefeuille"
+  fr: "&6&lPortefeuille"
+
+display-name-gold-coin:
+  en: "&e&lGold Coin"
+  fr: "&e&lPièce d'Or"
+
+display-name-diamond-coin:
+  en: "&b&lDiamond Coin"
+  fr: "&b&lPièce de Diamant"
+
+display-name-platinum-coin:
+  en: "&f&lPlatinum Coin"
+  fr: "&f&lPièce de Platine"
+
+display-name-money-note:
+  en: "&a&lMoney Note"
+  fr: "&a&lBillet de Banque"
+
+display-name-ruby:
+  en: "&c&lRuby Ingot"
+  fr: "&c&lLingot de Rubis"
+
+display-name-emerald:
+  en: "&2&lPure Emerald"
+  fr: "&2&lÉmeraude Pure"
+
+display-name-sapphire:
+  en: "&9&lSapphire"
+  fr: "&9&lSaphir"
+
+# ═══════════════════════════════════════════════════════════
+# INSTRUCTIONS
+# ═══════════════════════════════════════════════════════════
+# 1. Créer les textures dans: plugins/ItemsAdder/data/resource_pack/assets/custom/textures/item/
+#    - wallet.png (32x32)
+#    - gold_coin.png (16x16)
+#    - diamond_coin.png (16x16)
+#    - platinum_coin.png (16x16)
+#    - money_note.png (16x16)
+#    - ruby_ingot.png (16x16)
+#    - pure_emerald.png (16x16)
+#    - sapphire.png (16x16)
+#
+# 2. Exécuter /iazip pour générer le pack de ressources
+#
+# 3. Dans config.yml d'EconomyPlugin, utiliser:
+#    wallet-icon: "itemsadder:custom:wallet"
+#    wallet-display.chat-image: ":wallet:"
+#    withdraw.money-item: "itemsadder:custom:money_note"
+#
+# 4. Ajouter les items avec /economyitems:
+#    - itemsadder:custom:gold_coin (valeur: 100)
+#    - itemsadder:custom:diamond_coin (valeur: 1000)
+#    - itemsadder:custom:platinum_coin (valeur: 5000)
+#    - itemsadder:custom:ruby_ingot (valeur: 500)
+#    - itemsadder:custom:pure_emerald (valeur: 2000)
+#    - itemsadder:custom:sapphire (valeur: 1500)

@@ -1,0 +1,165 @@
+# Configuration EconomyPlugin v1.0.0
+
+# Paramètres généraux
+settings:
+  # Monnaie par défaut des nouveaux joueurs
+  starting-balance: 1000
+  
+  # Symbole de la monnaie
+  currency-symbol: "€"
+  
+  # Nom de la monnaie
+  currency-name: "Euro"
+  currency-name-plural: "Euros"
+  
+  # Montant maximum qu'un joueur peut avoir
+  max-balance: 1000000000
+  
+  # Montant minimum (peut être négatif pour dettes)
+  min-balance: 0
+  
+  # Activer les transactions entre joueurs
+  allow-player-transfers: true
+  
+  # Montant minimum pour un transfert
+  min-transfer-amount: 1
+
+# Configuration du portefeuille visuel
+wallet-display:
+  # Activer l'affichage personnalisé avec ItemAdder/Oraxen
+  enabled: true
+  
+  # Item à utiliser pour l'icône (ItemAdder ou Oraxen)
+  # Format: "itemsadder:namespace:item_id" ou "oraxen:item_id"
+  wallet-icon: "itemsadder:custom:wallet"
+  
+  # Image personnalisée dans le chat (nécessite ItemAdder/Oraxen + pack de ressources)
+  # Laissez vide pour désactiver
+  chat-image: ":wallet:"
+  
+  # Format d'affichage du portefeuille
+  format:
+    - "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - "&6&l⦿ PORTEFEUILLE"
+    - "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━"
+    - ""
+    - "&7Joueur: &f{player}"
+    - "&7Solde: &a{balance} {currency}"
+    - ""
+    - "&7Rang: &e#{rank} &8/ &e{total}"
+    - ""
+    - "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Configuration des items économiques
+economy-items:
+  # Activer le système d'items avec valeur économique
+  enabled: true
+  
+  # Items prédéfinis (exemples)
+  items:
+    "itemsadder:custom:gold_coin":
+      value: 100
+      sellable: true
+      buyable: true
+      buy-price: 110
+    
+    "itemsadder:custom:diamond_coin":
+      value: 1000
+      sellable: true
+      buyable: true
+      buy-price: 1100
+    
+    "oraxen:ruby":
+      value: 500
+      sellable: true
+      buyable: false
+
+# Configuration du GUI de gestion
+gui:
+  # Titre du GUI principal
+  title: "&6&lGestion Items Économiques"
+  
+  # Taille du GUI (9, 18, 27, 36, 45, 54)
+  size: 54
+  
+  # Item de décoration
+  filler-item: "BLACK_STAINED_GLASS_PANE"
+
+# Configuration du système de retrait
+withdraw:
+  # Activer le retrait d'argent physique
+  enabled: true
+  
+  # Item utilisé pour l'argent physique
+  money-item: "itemsadder:custom:money_note"
+  
+  # Montant minimum pour retirer
+  min-amount: 10
+  
+  # Montant maximum pour retirer
+  max-amount: 100000
+
+# Configuration BaltTop
+baltop:
+  # Nombre de joueurs par page
+  per-page: 10
+  
+  # Format d'affichage
+  format:
+    header:
+      - "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━"
+      - "&6&l⦿ TOP RICHESSES &7(Page {page}/{maxpage})"
+      - "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━"
+      - ""
+    
+    line: "&e{rank}. &f{player} &8- &a{balance} {currency}"
+    
+    footer:
+      - ""
+      - "&8&m━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# Messages
+messages:
+  prefix: "&8[&6Économie&8]&r "
+  
+  no-permission: "&cVous n'avez pas la permission."
+  player-not-found: "&cJoueur introuvable."
+  invalid-amount: "&cMontant invalide."
+  insufficient-funds: "&cFonds insuffisants. Il vous manque &e{amount} {currency}&c."
+  
+  balance-self: "&aVotre solde: &e{balance} {currency}"
+  balance-other: "&aSolde de &e{player}&a: &e{balance} {currency}"
+  
+  pay-sent: "&aVous avez envoyé &e{amount} {currency} &aà &e{player}&a."
+  pay-received: "&aVous avez reçu &e{amount} {currency} &ade &e{player}&a."
+  
+  eco-give: "&aVous avez donné &e{amount} {currency} &aà &e{player}&a."
+  eco-take: "&aVous avez retiré &e{amount} {currency} &aà &e{player}&a."
+  eco-set: "&aVous avez défini le solde de &e{player} &aà &e{amount} {currency}&a."
+  eco-reset: "&aVous avez réinitialisé le solde de &e{player}&a."
+  
+  withdraw-success: "&aVous avez retiré &e{amount} {currency} &aen argent physique."
+  withdraw-too-low: "&cMontant minimum: &e{min} {currency}&c."
+  withdraw-too-high: "&cMontant maximum: &e{max} {currency}&c."
+  
+  item-value-set: "&aValeur de l'item définie à &e{value} {currency}&a."
+  item-not-custom: "&cCet item n'est pas un item personnalisé ItemAdder/Oraxen."
+  
+  reload-success: "&aConfiguration rechargée avec succès!"
+
+# Configuration de la base de données
+database:
+  # Type: SQLITE, MYSQL
+  type: SQLITE
+  
+  # Configuration MySQL (si utilisé)
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "economy"
+    username: "root"
+    password: "password"
+    
+  # Fichier SQLite (si utilisé)
+  sqlite:
+    file: "economy.db"

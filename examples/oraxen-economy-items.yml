@@ -1,0 +1,241 @@
+# ═══════════════════════════════════════════════════════════
+# EXEMPLE DE CONFIGURATION ORAXEN POUR ECONOMYPLUGIN
+# ═══════════════════════════════════════════════════════════
+# Placer ce fichier dans: plugins/Oraxen/items/economy.yml
+
+# ═══════════════════════════════════════════════════════════
+# PORTEFEUILLE - Icône pour l'affichage /money
+# ═══════════════════════════════════════════════════════════
+wallet:
+  displayname: "<gradient:#FFD700:#FFA500>&lPortefeuille</gradient>"
+  material: PAPER
+  excludeFromInventory: false
+  ItemFlags:
+    - HIDE_ATTRIBUTES
+  Pack:
+    generate_model: true
+    parent_model: "item/generated"
+    textures:
+      - wallet.png
+  Mechanics:
+    custom_model_data:
+      value: 1000
+
+# ═══════════════════════════════════════════════════════════
+# PIÈCE D'OR - 100€
+# ═══════════════════════════════════════════════════════════
+gold_coin:
+  displayname: "<gradient:#FFD700:#FFED4E>&lPièce d'Or</gradient>"
+  material: GOLD_NUGGET
+  excludeFromInventory: false
+  lore:
+    - ""
+    - "<gray>Valeur: <gold>100€"
+    - ""
+    - "<yellow>✦ <gray>Pièce de monnaie précieuse"
+  ItemFlags:
+    - HIDE_ATTRIBUTES
+  Pack:
+    generate_model: true
+    parent_model: "item/generated"
+    textures:
+      - gold_coin.png
+  Mechanics:
+    custom_model_data:
+      value: 1001
+
+# ═══════════════════════════════════════════════════════════
+# PIÈCE DE DIAMANT - 1000€
+# ═══════════════════════════════════════════════════════════
+diamond_coin:
+  displayname: "<gradient:#55FFFF:#00FFFF>&lPièce de Diamant</gradient>"
+  material: DIAMOND
+  excludeFromInventory: false
+  lore:
+    - ""
+    - "<gray>Valeur: <aqua>1000€"
+    - ""
+    - "<aqua>✦ <gray>Pièce rare et précieuse"
+  ItemFlags:
+    - HIDE_ATTRIBUTES
+  Pack:
+    generate_model: true
+    parent_model: "item/generated"
+    textures:
+      - diamond_coin.png
+  Mechanics:
+    custom_model_data:
+      value: 1002
+
+# ═══════════════════════════════════════════════════════════
+# PIÈCE DE PLATINE - 5000€
+# ═══════════════════════════════════════════════════════════
+platinum_coin:
+  displayname: "<gradient:#E5E4E2:#FFFFFF>&lPièce de Platine</gradient>"
+  material: NETHERITE_INGOT
+  excludeFromInventory: false
+  lore:
+    - ""
+    - "<gray>Valeur: <white>5000€"
+    - ""
+    - "<white>✦ <gray>Pièce extrêmement rare"
+  ItemFlags:
+    - HIDE_ATTRIBUTES
+  Pack:
+    generate_model: true
+    parent_model: "item/generated"
+    textures:
+      - platinum_coin.png
+  Mechanics:
+    custom_model_data:
+      value: 1003
+
+# ═══════════════════════════════════════════════════════════
+# BILLET DE BANQUE - Pour /withdraw
+# ═══════════════════════════════════════════════════════════
+money_note:
+  displayname: "<gradient:#00FF00:#90EE90>&lBillet de Banque</gradient>"
+  material: PAPER
+  excludeFromInventory: false
+  lore:
+    - ""
+    - "<gray>Billet de monnaie légale"
+    - "<gray>Clic droit pour encaisser"
+    - ""
+  ItemFlags:
+    - HIDE_ATTRIBUTES
+    - HIDE_ENCHANTS
+  Pack:
+    generate_model: true
+    parent_model: "item/generated"
+    textures:
+      - money_note.png
+  Mechanics:
+    custom_model_data:
+      value: 1004
+
+# ═══════════════════════════════════════════════════════════
+# RUBIS - 500€
+# ═══════════════════════════════════════════════════════════
+ruby:
+  displayname: "<gradient:#FF0000:#8B0000>&lRubis</gradient>"
+  material: PRISMARINE_SHARD
+  excludeFromInventory: false
+  lore:
+    - ""
+    - "<gray>Valeur: <red>500€"
+    - ""
+    - "<red>✦ <gray>Pierre précieuse rouge"
+  ItemFlags:
+    - HIDE_ATTRIBUTES
+  Pack:
+    generate_model: true
+    parent_model: "item/generated"
+    textures:
+      - ruby.png
+  Mechanics:
+    custom_model_data:
+      value: 1005
+
+# ═══════════════════════════════════════════════════════════
+# ÉMERAUDE PURE - 2000€
+# ═══════════════════════════════════════════════════════════
+pure_emerald:
+  displayname: "<gradient:#50C878:#00A86B>&lÉmeraude Pure</gradient>"
+  material: EMERALD
+  excludeFromInventory: false
+  lore:
+    - ""
+    - "<gray>Valeur: <green>2000€"
+    - ""
+    - "<green>✦ <gray>Émeraude de qualité supérieure"
+  ItemFlags:
+    - HIDE_ATTRIBUTES
+  Pack:
+    generate_model: true
+    parent_model: "item/generated"
+    textures:
+      - pure_emerald.png
+  Mechanics:
+    custom_model_data:
+      value: 1006
+
+# ═══════════════════════════════════════════════════════════
+# SAPHIR - 1500€
+# ═══════════════════════════════════════════════════════════
+sapphire:
+  displayname: "<gradient:#0F52BA:#082567>&lSaphir</gradient>"
+  material: LAPIS_LAZULI
+  excludeFromInventory: false
+  lore:
+    - ""
+    - "<gray>Valeur: <blue>1500€"
+    - ""
+    - "<blue>✦ <gray>Pierre précieuse bleue"
+  ItemFlags:
+    - HIDE_ATTRIBUTES
+  Pack:
+    generate_model: true
+    parent_model: "item/generated"
+    textures:
+      - sapphire.png
+  Mechanics:
+    custom_model_data:
+      value: 1007
+
+# ═══════════════════════════════════════════════════════════
+# LINGOT D'ARGENT - 250€
+# ═══════════════════════════════════════════════════════════
+silver_ingot:
+  displayname: "<gradient:#C0C0C0:#E8E8E8>&lLingot d'Argent</gradient>"
+  material: IRON_INGOT
+  excludeFromInventory: false
+  lore:
+    - ""
+    - "<gray>Valeur: <white>250€"
+    - ""
+    - "<white>✦ <gray>Lingot de métal précieux"
+  ItemFlags:
+    - HIDE_ATTRIBUTES
+  Pack:
+    generate_model: true
+    parent_model: "item/generated"
+    textures:
+      - silver_ingot.png
+  Mechanics:
+    custom_model_data:
+      value: 1008
+
+# ═══════════════════════════════════════════════════════════
+# INSTRUCTIONS
+# ═══════════════════════════════════════════════════════════
+# 1. Créer les textures dans: plugins/Oraxen/pack/textures/items/
+#    - wallet.png (32x32)
+#    - gold_coin.png (16x16)
+#    - diamond_coin.png (16x16)
+#    - platinum_coin.png (16x16)
+#    - money_note.png (16x16)
+#    - ruby.png (16x16)
+#    - pure_emerald.png (16x16)
+#    - sapphire.png (16x16)
+#    - silver_ingot.png (16x16)
+#
+# 2. Exécuter /oraxen reload all pour générer le pack
+#
+# 3. Dans config.yml d'EconomyPlugin, utiliser:
+#    wallet-icon: "oraxen:wallet"
+#    withdraw.money-item: "oraxen:money_note"
+#
+# 4. Ajouter les items avec /economyitems:
+#    - oraxen:gold_coin (valeur: 100)
+#    - oraxen:diamond_coin (valeur: 1000)
+#    - oraxen:platinum_coin (valeur: 5000)
+#    - oraxen:ruby (valeur: 500)
+#    - oraxen:pure_emerald (valeur: 2000)
+#    - oraxen:sapphire (valeur: 1500)
+#    - oraxen:silver_ingot (valeur: 250)
+#
+# 5. Les joueurs peuvent:
+#    - Obtenir ces items via /oraxen give
+#    - Les vendre avec le système d'économie
+#    - Les acheter si configuré comme "buyable"

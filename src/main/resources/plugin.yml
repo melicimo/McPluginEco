@@ -1,0 +1,51 @@
+name: EconomyPlugin
+version: '1.0.0'
+main: fr.maitre.economy.EconomyPlugin
+api-version: '1.21'
+author: Maitre
+description: Système d'économie avancé avec support ItemAdder et Oraxen
+softdepend: [ItemsAdder, Oraxen]
+
+commands:
+  money:
+    description: Afficher votre portefeuille
+    usage: /money [joueur]
+    aliases: [balance, bal, argent]
+  
+  pay:
+    description: Envoyer de l'argent à un joueur
+    usage: /pay <joueur> <montant>
+    aliases: [payer]
+  
+  eco:
+    description: Commandes d'administration de l'économie
+    usage: /eco <give|take|set|reset> <joueur> <montant>
+    permission: economy.admin
+    aliases: [economy, economie]
+  
+  economyitems:
+    description: Ouvrir le GUI de gestion des items économiques
+    usage: /economyitems
+    permission: economy.admin
+    aliases: [ecoitems, ecoi]
+  
+  baltop:
+    description: Afficher le classement des joueurs les plus riches
+    usage: /baltop [page]
+    aliases: [balancetop, topbalance]
+  
+  withdraw:
+    description: Retirer de l'argent physique
+    usage: /withdraw <montant>
+    aliases: [retirer]
+
+permissions:
+  economy.admin:
+    description: Accès aux commandes d'administration
+    default: op
+  economy.use:
+    description: Utiliser les commandes de base
+    default: true
+  economy.withdraw:
+    description: Retirer de l'argent physique
+    default: true

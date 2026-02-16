@@ -4,8 +4,6 @@ import fr.maitre.economy.commands.*;
 import fr.maitre.economy.data.DataManager;
 import fr.maitre.economy.data.EconomyData;
 import fr.maitre.economy.hooks.ItemHook;
-import fr.maitre.economy.hooks.ItemsAdderHook;
-import fr.maitre.economy.hooks.OraxenHook;
 import fr.maitre.economy.listeners.PlayerListener;
 import fr.maitre.economy.managers.EconomyManager;
 import fr.maitre.economy.managers.ItemValueManager;

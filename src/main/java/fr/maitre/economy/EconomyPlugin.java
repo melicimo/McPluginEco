@@ -73,30 +73,9 @@ public class EconomyPlugin extends JavaPlugin {
     }
     
     private void initializeItemHook() {
-        // Vérifier ItemsAdder en premier
-        if (Bukkit.getPluginManager().getPlugin("ItemsAdder") != null) {
-            try {
-                this.itemHook = new ItemsAdderHook();
-                getLogger().info("Hook ItemsAdder initialisé avec succès!");
-                return;
-            } catch (Exception e) {
-                getLogger().warning("Erreur lors de l'initialisation d'ItemsAdder: " + e.getMessage());
-            }
-        }
-        
-        // Vérifier Oraxen ensuite
-        if (Bukkit.getPluginManager().getPlugin("Oraxen") != null) {
-            try {
-                this.itemHook = new OraxenHook();
-                getLogger().info("Hook Oraxen initialisé avec succès!");
-                return;
-            } catch (Exception e) {
-                getLogger().warning("Erreur lors de l'initialisation d'Oraxen: " + e.getMessage());
-            }
-        }
-        
-        getLogger().info("Aucun plugin d'items personnalisés détecté. Mode vanilla activé.");
-    }
+    getLogger().info("Mode vanilla activé (ItemsAdder/Oraxen non supportés dans cette version).");
+    this.itemHook = null;
+}
     
     private void registerCommands() {
         getCommand("money").setExecutor(new MoneyCommand(this));

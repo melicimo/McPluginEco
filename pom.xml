@@ -54,10 +54,6 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
     </repositories>
 
     <dependencies>
@@ -66,20 +62,6 @@
             <artifactId>spigot-api</artifactId>
             <version>1.21.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.LoneDev6</groupId>
-            <artifactId>api-itemsadder</artifactId>
-            <version>3.6.1</version>
-            <scope>provided</scope>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>io.th0rgal</groupId>
-            <artifactId>oraxen</artifactId>
-            <version>1.171.0</version>
-            <scope>provided</scope>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>
